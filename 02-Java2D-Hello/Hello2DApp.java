@@ -37,11 +37,10 @@ class Hello2DFrame extends JFrame {
     public void paint (Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setPaint(Color.blue);
         int w = getWidth();
         int h = getHeight();
 
-	// cor de fundo
+        // cor de fundo
         g2d.setPaint(Color.black);
         g2d.fillRect(0,0, w,h);
 
@@ -52,30 +51,20 @@ class Hello2DFrame extends JFrame {
         g2d.drawLine(w/2,h,3*(w/4),h/2);
 
         g2d.setPaint(Color.blue);
-	g2d.drawOval(w/8,h/8,w/4,h/4);
-	g2d.drawOval(5*w/8,h/8,w/4,h/4);
-	g2d.drawOval(w/8,5*h/8,w/4,h/4);
-	g2d.drawOval(5*w/8,5*h/8,w/4,h/4);
+        g2d.drawOval(w/8,h/8,w/4,h/4);
+        g2d.drawOval(5*w/8,h/8,w/4,h/4);
+        g2d.drawOval(w/8,5*h/8,w/4,h/4);
+        g2d.drawOval(5*w/8,5*h/8,w/4,h/4);
 
 
 
-        //g2d.setPaint(Color.yellow);
         //g2d.drawLine(w/4,h/2, w/2,0);
         //g2d.drawLine(w/2,0,3*(w/4),h/2);
         //g2d.drawLine(w/4,h/2, w/2,h);
         //g2d.drawLine(w/2,h,3*(w/4),h/2);
-	int pathxs[] = {0, w/2, w, w/2};
-	int pathys[] = {h/2, 20, h/2, h};
-	//g2d.fillPolygon(pathxs, pathys, pathxs.length);
-
-        //g2d.setPaint(Color.blue);
-	//g2d.fillOval(w/2-(w/4), 200, w/2+(w/4),400);
-
-	//g2d.drawOval(w/8,h/8,w/4,h/4);
-	//g2d.drawOval(5*w/8,h/8,w/4,h/4);
-	//g2d.drawOval(w/8,5*h/8,w/4,h/4);
-	//g2d.drawOval(5*w/8,5*h/8,w/4,h/4);
-
+        g2d.setPaint(Color.green);
+        int pathxs[] = {0, w/2, w, w/2};
+        int pathys[] = {h/2, 20, h/2, h};
+        g2d.drawPolygon(pathxs, pathys, pathxs.length);
     }
-
 }
