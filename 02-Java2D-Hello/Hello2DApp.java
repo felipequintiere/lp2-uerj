@@ -30,7 +30,7 @@ class Hello2DFrame extends JFrame {
             }
         );
         this.setTitle("título!");
-        this.setSize(350, 350);
+        this.setSize(400, 400);
         this.setVisible(true);
     }
 
