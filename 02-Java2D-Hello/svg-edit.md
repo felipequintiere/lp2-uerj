@@ -56,3 +56,5 @@ criar uma versão espelhada do objeto selecionado (verticalmente ou horizontalme
 - imagem (objeto):
   - URL
 -->
+
+# 4. [hierarquia de classes](./hierarquia.png)
