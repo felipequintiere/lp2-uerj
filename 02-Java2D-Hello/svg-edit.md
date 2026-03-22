@@ -25,8 +25,8 @@ agrupar: combinar dois ou mais objetos em uma única unidade, permitindo outras 
 criar uma cópia do objeto (ou grupo de objetos) selecionado, replicando os atributos e propriedades no novo objeto
 
 - trazer para frente/enviar para trás\
-permutar a ordem de empilhamento dos objetos em relação aos demais elementos existentes
-trazer para frente: mover o objeto (ou grupo de objetos) para a camada superior
+permutar a ordem de empilhamento dos objetos em relação aos demais elementos existentes\
+trazer para frente: mover o objeto (ou grupo de objetos) para a camada superior\
 enviar para trás: posicionar o objeto atrás dos outros objetos
 
 - inverter verticalmente/horizontalmente:\
@@ -40,19 +40,19 @@ criar uma versão espelhada do objeto selecionado (verticalmente ou horizontalme
 - cor do traço
 
 # 3.
-retângulos/elipses/estrelas:\
-    cor de preenchimento
+- retângulos, elipses e estrelas:
+  - cor de preenchimento
 
-estrela:\
-    número de vértices\
-    quão pontiagudas são as pontas (pointness)\
-    posição das pontas em relação ao centro (radial shift)
-	
-reta:\
-    tipo de traçado\
-    tipo de extremidade
+- estrela:
+  - número de vértices
+  - quão pontiagudas são as pontas (pointness)
+  - posição das pontas em relação ao centro (radial shift)
+
+- reta:
+  - tipo de traçado
+  - tipo de extremidade
 
 <!--
-imagem (objeto):
-    URL
+- imagem (objeto):
+  - URL
 -->
