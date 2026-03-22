@@ -10,13 +10,13 @@
 -->
 
 # SVG-Edit
-um editor vetorial web-based escrito em java\
+um editor vetorial web-based escrito em java
 
 https://github.com/svg-edit/svgedit?tab=readme-ov-file
 
 ---
 
-# 1. Que outras operações gráficas são comuns? Explique o comportamento esperado de pelo menos 3 operações (1 parágrafo para cada).
+# 1.
 
 - agrupar/desagrupar objetos
 agrupar: combinar dois ou mais objetos em uma única unidade, permitindo outras operações sobre o conjunto; desagrupar: reverter um agrupamento existente, tornando cada objeto editável individualmente novamente
