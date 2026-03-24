@@ -46,6 +46,7 @@ int main(void)
 	Figura * estrela1 = (Figura*) malloc(sizeof(Figura));
 
 	preenche(estrela1,0,10,10);
+	print(estrela1,0);
 
 	return (EXIT_SUCCESS);
 }
@@ -71,8 +72,8 @@ void preenche(Figura * figura, int tipo, int x, int y)
 	else
 		exit(EXIT_FAILURE);
 }
-/*
-void print(Estrela * estrela)
+
+void print(Figura * fig, int tipo)
 {
 	printf("PRINT ESTRELA\n");
 	printf("posição x: %d\n",estrela->x);
@@ -81,5 +82,4 @@ void print(Estrela * estrela)
 	printf("distância radial: %d\n\n",estrela->distancia_radial);
 }
 
-*/
 void print(Figura *, int);
