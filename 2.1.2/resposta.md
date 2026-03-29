@@ -44,6 +44,7 @@ class Rect {
 	```
 
 1. execução do construtor `Rect()`
+   
 	os campos x, y, w, h foram definidos na classe `Rect`
 	``` java
 	Rect (int x, int y, int w, int h) {  
