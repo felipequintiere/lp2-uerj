@@ -53,13 +53,13 @@ class Rect {
 		this.h  =  h;  
 	}
 	```
-	parâmetros recebidos (item 2):
-	`x=1`, `y=1`, `w=10`, `z=10`
-	- **acesso ao campo `w`:**
-	```this.w = w;``` 
+	parâmetros recebidos (item 2): <br>
+	`x=1`, `y=1`, `w=10`, `z=10` <br>
+	- **acesso ao campo `w`:** <br>
+	```this.w = w;``` <br>
 	significa que o campo `w` do objeto `r1` recebe o valor do parâmetro `w` passado para o construtor `Rect()`
-1.  dentro de main(), chamda do método `print()`
-	```r1.print();```
+1.  dentro de main(), chamda do método `print()` <br>
+	```r1.print();``` <br>
 	o objeto `r1` chama o seu método `print()`
 1. execução do método `print()`
 ``` java
@@ -68,8 +68,8 @@ class Rect {
 		this.w, this.h, this.x, this.y);
 	}
 ```
-- **acesso ao campo w:**
-```this.w```
+- **acesso ao campo w:** <br>
+```this.w``` <br>
 significa que a JVM lê o valor do campo `w` do objeto `r1` (valor 10; item 2)
 
 ---
