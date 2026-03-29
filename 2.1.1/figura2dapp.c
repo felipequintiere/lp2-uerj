@@ -49,12 +49,12 @@ int main(void)
 
 void preenche(Figura *figura)
 {
-#define prfscf(fmt,specifier,item) \
-	(printf(fmt),scanf(specifier,&(item)))
+#define PRFSCF(fmt,specifier,item) \
+	( printf(fmt) , scanf(specifier, &(item) ) )
 	
-	prfscf("posição x: ","%f",figura->x);
-	prfscf("posição y: ","%f",figura->y);
-	prfscf(
+	PRFSCF("posição x: ","%f",figura->x);
+	PRFSCF("posição y: ","%f",figura->y);
+	PRFSCF(
 	"\ntipos disponíveis\n"
 	"    ESTRELA: 0\n"
 	"    ELIPSE:  1\n"
@@ -63,25 +63,26 @@ void preenche(Figura *figura)
 
 	if (figura->tipo == ESTRELA)
 	{
-		prfscf("\nn° de vértices x: ","%d",figura->dados.estrela.vertices);
-		prfscf("raio externo: ","%f",figura->dados.estrela.raio_externo);
-		prfscf("raio interno: ","%f",figura->dados.estrela.raio_interno);
+		PRFSCF("\nn° de vértices x: ","%d",figura->dados.estrela.vertices);
+		PRFSCF("raio externo: ","%f",figura->dados.estrela.raio_externo);
+		PRFSCF("raio interno: ","%f",figura->dados.estrela.raio_interno);
 	}
 	else if (figura->tipo == ELIPSE)
 	{
-		prfscf("\nsemi-eixo x: ","%f",figura->dados.elipse.eixo_x);
-		prfscf("semi-eixo y: ","%f",figura->dados.elipse.eixo_y);
+		PRFSCF("\nsemi-eixo x: ","%f",figura->dados.elipse.eixo_x);
+		PRFSCF("semi-eixo y: ","%f",figura->dados.elipse.eixo_y);
 	}
 	else
 	{
 		printf("TIPO INVÁLIDO!\n");
 		exit(EXIT_FAILURE);
 	}
-#undef prfscf
+#undef PRFSCF
 }
 
 void print(Figura *figura)
 {
+	printf("\nDADOS ARMAZENADOS:");
 	printf("\nposição x: %f\n",figura->x);
 	printf("posição y: %f\n",figura->y);
 	if (figura->tipo == ESTRELA)
