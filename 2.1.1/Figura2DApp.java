@@ -69,7 +69,7 @@ class Elipse extends Figura
 }
 
 
-public class Teste2DApp {
+public class Figura2DApp {
 	static void main(String[] args)
 	{
 		Figura r1 = new Estrela(0,0,5,10,6);
