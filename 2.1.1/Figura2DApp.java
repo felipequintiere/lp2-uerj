@@ -7,10 +7,18 @@
  * As informações contidas na struct e class precisam ser suficientes para representar a figura de forma completa. Não é necessário realmente desenhar as figuras na tela, mas somente com essas informações teria que ser possível desenhá-las de forma não ambígua
 */
 
+public class Figura2DApp {
+	static void main(String[] args)
+	{
+		Figura r1 = new Estrela(0,0,5,10,6);
+		r1.print();
+	}
+}
+
 abstract class Figura
 {
-	float x;
-	float y;
+	protected float x;
+	protected float y;
 
 	public Figura(float x, float y)
 	{
@@ -48,8 +56,8 @@ class Estrela extends Figura
 
 class Elipse extends Figura
 {
-	float eixoX;
-	float eixoY;
+	private float eixoX;
+	private float eixoY;
 
 	public Elipse(float x, float y, float eixoX, float eixoY)
 	{
@@ -69,10 +77,3 @@ class Elipse extends Figura
 }
 
 
-public class Figura2DApp {
-	static void main(String[] args)
-	{
-		Figura r1 = new Estrela(0,0,5,10,6);
-		r1.print();
-	}
-}

@@ -82,8 +82,8 @@ void preenche(Figura *figura)
 
 void print(Figura *figura)
 {
-	printf("\nDADOS ARMAZENADOS:");
-	printf("\nposição x: %f\n",figura->x);
+	printf("\nDADOS ARMAZENADOS:\n");
+	printf("posição x: %f\n",figura->x);
 	printf("posição y: %f\n",figura->y);
 	if (figura->tipo == ESTRELA)
 	{
