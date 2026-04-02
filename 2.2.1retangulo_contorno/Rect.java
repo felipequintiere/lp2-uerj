@@ -27,6 +27,6 @@ class Rect {
 		this.h = h;
 	}
 
-	public void print () {
+	public void print() {
 	}
 }

@@ -10,15 +10,10 @@
 - Não use `print` dentro dos métodos.
 */
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class RectApp {
 	public static void main (String[] args) {
-        Hello2DFrame frame = new Hello2DFrame();
 
-		Rect r1 = new Rect(1,1, 10,10);
+		Rect r1 = new Rect(1,1,10,10);
 		r1.print();
 
 		System.out.printf(
@@ -33,30 +28,6 @@ public class RectApp {
 	}
 }
 
-class Hello2DFrame extends JFrame {
-    public Hello2DFrame () {
-        this.addWindowListener (
-            new WindowAdapter() {
-                public void windowClosing (WindowEvent e) {
-                    System.exit(0);
-                }
-            }
-        );
-        this.setTitle("example title!");
-        this.setSize(400, 400);
-        this.setVisible(true);
-    }
-
-    public void paint (Graphics g) {
-        super.paint(g);
-        Graphics2D g2d = (Graphics2D) g;
-        int w = getWidth();
-        int h = getHeight();
-
-		g2d.setPaint(Color.blue);
-    }
-}
-
 class Rect {
 	private int x, y;
 	private int w, h;
@@ -67,12 +38,32 @@ class Rect {
 		this.w = w;
 		this.h = h;
 	}
-
-	public void print () {
-		//System.out.format();
+	
+	public void drag(int dx, int dy) {
+		this.x += dx;
+		this.y += dy;
 	}
 
-	public void paint (Graphics g) {
+	public int getWidth() {
+		return this.w;
+	}
+	public int getHeight() {
+		return this.h;
+	}
+	public int area() {
+		return (this.w * this.h);	
+	}
+	public int getX() {
+		return this.x;
+	}
+	public int getY() {
+		return this.y;
+	}
 
+	public void print () {
+		System.out.printf(
+			"w: %d\nh: %d\n" +
+			"x: %d\ny: %d\n",
+			this.w,this.h,this.x,this.y);
 	}
 }
