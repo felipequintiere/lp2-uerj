@@ -15,37 +15,56 @@ public class RectApp {
 		Rect r1 = new Rect(1,1, 10,10);
 		r1.print();
 
-		System.out.printf("\nW:10, H:10, A: %d\n", r1.area());
-		System.out.printf("\ndx = 10, dy = 10\n");
+		System.out.printf(
+			"\nwidth: %d\nheight: %d\narea: %d\n" +
+			"x: %d\ny: %d\n",
+			r1.getWidth(),r1.getHeight(),r1.area(),r1.getX(),r1.getY());
+
+		System.out.printf("\ndx: 10, dy: 10\n");
 		r1.drag(10,10);
 		r1.print();
 
 	}
 }
+
 class Rect {
-	int x, y;
-	int w, h;
-	Rect (int x, int y, int w, int h) {
+	private int x, y;
+	private int w, h;
+
+	public Rect (int x, int y, int w, int h) {
 		this.x = x;
 		this.y = y;
 		this.w = w;
 		this.h = h;
 	}
 
-	int area()
+	public int getWidth() {
+		return this.w;
+	}
+	public int getHeight() {
+		return this.h;
+	}
+	public int area()
 	{
 		return(this.w * this.h);
 
 	}
 
-	void drag (int dx, int dy)
+	public int getX() {
+		return this.x;
+	}
+	public int getY() {
+		return this.y;
+	}
+	public void drag (int dx, int dy)
 	{
 		this.x += dx;
 		this.y += dy;
 	}
 
-	void print () {
-		System.out.format("Retangulo de tamanho (%d,%d) e área (%d) na posicao (%d,%d).\n",
+	public void print () {
+		System.out.format(
+			"Retângulo de tamanho (%d,%d) e área (%d) na posição (%d,%d).\n",
 			this.w, this.h, this.area(), this.x, this.y);
 	}
 }
