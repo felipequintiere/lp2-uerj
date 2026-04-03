@@ -17,7 +17,7 @@ import javax.swing.*;
 
 public class ElipseApp {
 	public static void main (String[] args) {
-        PaintFrame frame = new PaintFrame();
+		PaintFrame frame = new PaintFrame();
 		frame.setVisible(true);
 	}
 }
@@ -41,10 +41,10 @@ class Elipse {
 	public void paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 
-        g2d.setColor(this.fundo);
+		g2d.setColor(this.fundo);
 		g2d.fillOval(this.x, this.y,this.w, this.h);
 
-        g2d.setColor(this.contorno);
+		g2d.setColor(this.contorno);
 		g2d.drawOval(this.x, this.y,this.w, this.h);
 	}
 }
@@ -52,16 +52,16 @@ class Elipse {
 class PaintFrame extends JFrame {
 	Elipse r1, r2, r3, r4, r5, r6;
 
-    public PaintFrame () {
-        this.addWindowListener (
-            new WindowAdapter() {
-                public void windowClosing (WindowEvent e) {
-                    System.exit(0);
-                }
-            }
-        );
-        this.setTitle(" Elipse ");
-        this.setSize(600, 600);
+	public PaintFrame () {
+		this.addWindowListener (
+			new WindowAdapter() {
+				public void windowClosing (WindowEvent e) {
+					System.exit(0);
+				}
+			}
+		);
+		this.setTitle(" Elipse ");
+		this.setSize(600, 600);
 		this.getContentPane().setBackground(Color.BLACK);
 
 		this.r1 = new Elipse(20,40, 60,90,Color.GREEN,Color.RED);
@@ -70,12 +70,12 @@ class PaintFrame extends JFrame {
 		this.r4 = new Elipse(200,150, 150,80,Color.GRAY,Color.CYAN);
 		this.r5 = new Elipse(400,190, 140,120,Color.RED, new Color(33,139,235));
 		this.r6 = new Elipse(100,330, 370,210,Color.WHITE, new Color(0,255,0));
-    }
+	}
 
-    public void paint (Graphics g) {
-        super.paint(g);
-        //int w = getWidth();
-        //int h = getHeight();
+	public void paint (Graphics g) {
+		super.paint(g);
+		//int w = getWidth();
+		//int h = getHeight();
 
 		this.r1.paint(g);
 		this.r2.paint(g);
@@ -83,5 +83,5 @@ class PaintFrame extends JFrame {
 		this.r4.paint(g);
 		this.r5.paint(g);
 		this.r6.paint(g);
-    }
+	}
 }
