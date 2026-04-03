@@ -15,21 +15,21 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-public class RectApp {
+public class ElipseApp {
 	public static void main (String[] args) {
         PaintFrame frame = new PaintFrame();
 		frame.setVisible(true);
 	}
 }
 
-class Rect {
+class Elipse {
 	private int x, y;
 	private int w, h;
 
 	private Color fundo;
 	private Color contorno;
 
-	public Rect (int x, int y, int w, int h, Color fundo, Color contorno) {
+	public Elipse (int x, int y, int w, int h, Color fundo, Color contorno) {
 		this.x = x;
 		this.y = y;
 		this.w = w;
@@ -38,22 +38,19 @@ class Rect {
 		this.contorno = contorno;
 	}
 
-	public void print() {
-	}
-
 	public void paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 
         g2d.setColor(this.fundo);
-		g2d.fillRect(this.x, this.y,this.w, this.h);
+		g2d.fillOval(this.x, this.y,this.w, this.h);
 
         g2d.setColor(this.contorno);
-		g2d.drawRect(this.x, this.y,this.w, this.h);
+		g2d.drawOval(this.x, this.y,this.w, this.h);
 	}
 }
 
 class PaintFrame extends JFrame {
-	Rect r1, r2, r3, r4, r5, r6;
+	Elipse r1, r2, r3, r4, r5, r6;
 
     public PaintFrame () {
         this.addWindowListener (
@@ -63,16 +60,16 @@ class PaintFrame extends JFrame {
                 }
             }
         );
-        this.setTitle("Rect - example");
+        this.setTitle(" Elipse ");
         this.setSize(600, 600);
 		this.getContentPane().setBackground(Color.BLACK);
 
-		this.r1 = new Rect(20,40, 60,90,Color.GREEN,Color.RED);
-		this.r2 = new Rect(30,180, 120,90,Color.CYAN,Color.GREEN);
-		this.r3 = new Rect(100,60, 100,70,Color.BLUE,Color.WHITE);
-		this.r4 = new Rect(200,150, 150,80,Color.GRAY,Color.CYAN);
-		this.r5 = new Rect(400,190, 140,120,Color.RED, new Color(33,139,235));
-		this.r6 = new Rect(100,330, 370,210,Color.WHITE, new Color(0,255,0));
+		this.r1 = new Elipse(20,40, 60,90,Color.GREEN,Color.RED);
+		this.r2 = new Elipse(30,180, 120,90,Color.CYAN,Color.GREEN);
+		this.r3 = new Elipse(100,60, 100,70,Color.BLUE,Color.WHITE);
+		this.r4 = new Elipse(200,150, 150,80,Color.GRAY,Color.CYAN);
+		this.r5 = new Elipse(400,190, 140,120,Color.RED, new Color(33,139,235));
+		this.r6 = new Elipse(100,330, 370,210,Color.WHITE, new Color(0,255,0));
     }
 
     public void paint (Graphics g) {
